@@ -64,7 +64,6 @@ public:
 int main() {
     Solution obj;
 
-    // Hardcoded input
     string haystack = "butsadsad";
     string needle = "sad";
 

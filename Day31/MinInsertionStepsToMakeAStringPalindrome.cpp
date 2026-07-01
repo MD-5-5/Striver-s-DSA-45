@@ -35,7 +35,6 @@ public:
 int main() {
     Solution obj;
     string s = "mbadm";
-
     cout<<obj.minInsertions(s) << endl;
 
     return 0;
