@@ -44,15 +44,14 @@ public:
     void leftPreOrder(TreeNode* root, vector<int>& ans, int level) {
         if (root == NULL) return;
 
-        if (ans[level] == -1)
             ans[level] = root->val;
 
-        leftPreOrder(root->left, ans, level + 1);
         leftPreOrder(root->right, ans, level + 1);
+        leftPreOrder(root->left, ans, level + 1);
     }
 
     vector<int> leftSideView(TreeNode* root) {
-        vector<int> ans(levels(root), -1);
+        vector<int> ans(levels(root), 0);
         leftPreOrder(root, ans, 0);
         return ans;
     }
